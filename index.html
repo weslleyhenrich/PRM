@@ -30,12 +30,12 @@
 
     <div class="max-w-6xl w-full bg-white rounded-xl shadow-2xl overflow-hidden mx-auto ">
         
-        <div class="grid grid-cols-2 gap-4 p-4 bg-white rounded-t-xl items-center">
+        <div class="grid grid-cols-2 gap-4 p-4 bg-black rounded-t-xl items-center">
             <div class="flex justify-center">
-                <img src="https://i.ibb.co/wfDSZ16/Captura-de-tela-2025-08-15-162619.png" alt="Captura-de-tela-2025-08-15-162619" class="h-20 w-auto">
+                <img src="https://placehold.co/200x60/000000/FFFFFF?text=Sua+Empresa" alt="Logo da Sua Empresa" class="h-12 w-auto">
             </div>
             <div class="flex justify-center">
-                <img src="https://i.ibb.co/3yTgGQ01/LOGO-SEM-FUNDO-1.png" alt="Logo Agnus" class="h-20 w-auto">
+                <img src="https://i.ibb.co/DgfW63kz/5.png" alt="Logo Agnus" class="h-20 w-auto">
             </div>
         </div>
 
@@ -98,24 +98,20 @@
                 <div id="cost-simulator" class="bg-gray-50 p-6 rounded-lg border border-gray-200">
                     <h2 class="text-2xl font-bold text-gray-800 text-center mb-1">Passo 3: Simule os Custos</h2>
                     <p class="text-center text-gray-600 mb-6">Insira as idades para ver os valores de cada plano.</p>
-                    
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                         <div>
                             <label for="holder-age" class="block text-sm font-medium text-gray-700">Sua idade (Titular)</label>
                             <input type="number" id="holder-age" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm" placeholder="Ex: 35">
                         </div>
-
                         <div id="dependents-section">
                             <label class="block text-sm font-medium text-gray-700">Idade dos dependentes (se houver)</label>
                             <div id="dependents-list" class="space-y-2 mt-1"></div>
                             <button id="add-dependent-btn" class="mt-2 text-sm text-blue-600 hover:text-blue-800 font-semibold">+ Adicionar dependente</button>
                         </div>
                     </div>
-                    
                     <button id="calculate-btn" class="w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center">
                         Simular Custos
                     </button>
-
                     <div id="simulation-results" class="mt-6 hidden"></div>
                 </div>
 
@@ -124,11 +120,9 @@
                     <p class="text-center text-gray-600 mb-6">
                         Para garantir que seus médicos e hospitais preferidos estão cobertos, siga o passo a passo abaixo e consulte a rede completa no site oficial da Amil.
                     </p>
-                    
                     <div class="my-6 flex justify-center">
                         <img src="https://i.ibb.co/yGzTxX8/Untitled-Made-with-Flex-Clip.gif" alt="Passo a passo para consultar a rede credenciada Amil" border="0" class="rounded-lg shadow-md max-w-full h-auto">
                     </div>
-                
                     <div class="mt-4">
                         <button id="view-network-btn" class="w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors">
                             Acessar Rede Credenciada Amil
@@ -139,114 +133,129 @@
                 <div id="copay-info-section" class="bg-gray-50 p-6 rounded-lg border border-gray-200 mt-8">
                     <h2 class="text-2xl font-bold text-gray-800 text-center mb-2">Regras de Coparticipação</h2>
                     <p class="text-center text-gray-700 leading-relaxed max-w-4xl mx-auto mb-8">
-                        A coparticipação é uma modalidade em que o usuário paga, além do valor mensal do plano, uma taxa a cada vez que utilizar (consultas, exames, etc). O valor da coparticipação será de 30% do custo do serviço, mas existe um <strong>limite (teto) de cobrança</strong> para cada procedimento, garantindo maior previsibilidade. Confira os exemplos de valores máximos abaixo:
+                        A coparticipação é uma modalidade em que o usuário paga, além do valor mensal do plano, uma taxa a cada vez que utilizar um serviço. O valor é um percentual do custo, mas com um <strong>limite (teto) de cobrança</strong> para garantir previsibilidade.
                     </p>
                     
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-sm text-left text-gray-700 bg-white rounded-lg shadow-md">
-                            <thead class="bg-gray-200 text-xs uppercase">
-                                <tr>
-                                    <th class="p-3 text-left font-medium">Procedimento</th>
-                                    <th class="p-3 text-center font-medium">Tipo</th>
-                                    <th class="p-3 text-center font-medium">Bronze / Bronze+</th>
-                                    <th class="p-3 text-center font-medium">Prata / Ouro</th>
-                                    <th class="p-3 text-center font-medium">S380</th>
-                                    <th class="p-3 text-center font-medium">S450</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="border-b"><td class="p-3 font-semibold text-gray-800" colspan="6">Consultas</td></tr>
-                                <tr class="border-b">
-                                    <td class="p-3 text-left">Consulta Eletiva</td>
-                                    <td class="p-3 text-center">Completa</td>
-                                    <td class="p-3 text-center">R$ 30,00</td>
-                                    <td class="p-3 text-center">R$ 30,00</td>
-                                    <td class="p-3 text-center">R$ 30,00</td>
-                                    <td class="p-3 text-center">R$ 30,00</td>
-                                </tr>
-                                <tr class="border-b">
-                                    <td class="p-3 text-left">Consulta em Pronto-Socorro</td>
-                                    <td class="p-3 text-center">Completa</td>
-                                    <td class="p-3 text-center">R$ 80,00</td>
-                                    <td class="p-3 text-center">R$ 90,00</td>
-                                    <td class="p-3 text-center">R$ 80,00</td>
-                                    <td class="p-3 text-center">R$ 90,00</td>
-                                </tr>
-                                <tr class="border-b"><td class="p-3 font-semibold text-gray-800" colspan="6">Exames</td></tr>
-                                <tr class="border-b">
-                                    <td class="p-3 text-left">Exames Básicos</td>
-                                    <td class="p-3 text-center">Completa</td>
-                                    <td class="p-3 text-center">R$ 20,00</td>
-                                    <td class="p-3 text-center">R$ 25,00</td>
-                                    <td class="p-3 text-center">R$ 20,00</td>
-                                    <td class="p-3 text-center">R$ 25,00</td>
-                                </tr>
-                                <tr class="border-b">
-                                    <td class="p-3 text-left">Exames Especiais</td>
-                                    <td class="p-3 text-center">Completa</td>
-                                    <td class="p-3 text-center">R$ 100,00</td>
-                                    <td class="p-3 text-center">R$ 110,00</td>
-                                    <td class="p-3 text-center">R$ 100,00</td>
-                                    <td class="p-3 text-center">R$ 110,00</td>
-                                </tr>
-                                <tr class="border-b"><td class="p-3 font-semibold text-gray-800" colspan="6">Terapias e Procedimentos</td></tr>
-                                <tr class="border-b">
-                                    <td class="p-3 text-left">Procedimentos Básicos</td>
-                                    <td class="p-3 text-center">Completa</td>
-                                    <td class="p-3 text-center">R$ 35,00</td>
-                                    <td class="p-3 text-center">R$ 60,00</td>
-                                    <td class="p-3 text-center">R$ 35,00</td>
-                                    <td class="p-3 text-center">R$ 60,00</td>
-                                </tr>
-                                <tr class="border-b">
-                                    <td class="p-3 text-left">Procedimentos Especiais</td>
-                                    <td class="p-3 text-center">Completa</td>
-                                    <td class="p-3 text-center">R$ 140,00</td>
-                                    <td class="p-3 text-center">R$ 150,00</td>
-                                    <td class="p-3 text-center">R$ 140,00</td>
-                                    <td class="p-3 text-center">R$ 150,00</td>
-                                </tr>
-                                 <tr class="border-b">
-                                    <td class="p-3 text-left">Fisioterapia, Fono, Nutrição, Psicoterapia, T. Ocupacional</td>
-                                    <td class="p-3 text-center">Parcial / Completa</td>
-                                    <td class="p-3 text-center">R$ 60,00</td>
-                                    <td class="p-3 text-center">R$ 60,00</td>
-                                    <td class="p-3 text-center">R$ 60,00</td>
-                                    <td class="p-3 text-center">R$ 60,00</td>
-                                </tr>
-                                <tr class="border-b"><td class="p-3 font-semibold text-gray-800" colspan="6">Internação</td></tr>
-                                <tr>
-                                    <td class="p-3 text-left">Internação</td>
-                                    <td class="p-3 text-center">Completa</td>
-                                    <td class="p-3 text-center">R$ 180,00</td>
-                                    <td class="p-3 text-center">R$ 220,00</td>
-                                    <td class="p-3 text-center">R$ 180,00</td>
-                                    <td class="p-3 text-center">R$ 220,00</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div id="copay-table-completa" class="hidden">
+                        <h3 class="text-lg font-bold text-gray-800 text-center mb-4">Valores para Coparticipação Completa</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm text-left text-gray-700 bg-white rounded-lg shadow-md">
+                                <thead class="bg-gray-200 text-xs uppercase">
+                                    <tr>
+                                        <th class="p-3 text-left font-medium">Procedimento</th>
+                                        <th class="p-3 text-center font-medium">Percentual</th>
+                                        <th class="p-3 text-center font-medium">Bronze / Bronze+</th>
+                                        <th class="p-3 text-center font-medium">Prata / Ouro</th>
+                                        <th class="p-3 text-center font-medium">S380</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b bg-gray-50"><td class="p-2 font-semibold text-gray-600" colspan="5">Consultas</td></tr>
+                                    <tr class="border-b">
+                                        <td class="p-3 text-left">Consulta Eletiva</td>
+                                        <td class="p-3 text-center">30%</td>
+                                        <td class="p-3 text-center">R$ 30,00</td>
+                                        <td class="p-3 text-center">R$ 30,00</td>
+                                        <td class="p-3 text-center">R$ 30,00</td>
+                                    </tr>
+                                    <tr class="border-b">
+                                        <td class="p-3 text-left">Consulta em Pronto-Socorro</td>
+                                        <td class="p-3 text-center">40%</td>
+                                        <td class="p-3 text-center">R$ 80,00</td>
+                                        <td class="p-3 text-center">R$ 90,00</td>
+                                        <td class="p-3 text-center">R$ 80,00</td>
+                                    </tr>
+                                    <tr class="border-b bg-gray-50"><td class="p-2 font-semibold text-gray-600" colspan="5">Exames</td></tr>
+                                    <tr class="border-b">
+                                        <td class="p-3 text-left">Exames Básicos</td>
+                                        <td class="p-3 text-center">30%</td>
+                                        <td class="p-3 text-center">R$ 20,00</td>
+                                        <td class="p-3 text-center">R$ 25,00</td>
+                                        <td class="p-3 text-center">R$ 20,00</td>
+                                    </tr>
+                                    <tr class="border-b">
+                                        <td class="p-3 text-left">Exames Especiais</td>
+                                        <td class="p-3 text-center">30%</td>
+                                        <td class="p-3 text-center">R$ 100,00</td>
+                                        <td class="p-3 text-center">R$ 110,00</td>
+                                        <td class="p-3 text-center">R$ 100,00</td>
+                                    </tr>
+                                    <tr class="border-b bg-gray-50"><td class="p-2 font-semibold text-gray-600" colspan="5">Procedimentos e Terapias</td></tr>
+                                    <tr class="border-b">
+                                        <td class="p-3 text-left">Procedimentos Básicos</td>
+                                        <td class="p-3 text-center">30%</td>
+                                        <td class="p-3 text-center">R$ 35,00</td>
+                                        <td class="p-3 text-center">R$ 60,00</td>
+                                        <td class="p-3 text-center">R$ 35,00</td>
+                                    </tr>
+                                    <tr class="border-b">
+                                        <td class="p-3 text-left">Procedimentos Especiais</td>
+                                        <td class="p-3 text-center">30%</td>
+                                        <td class="p-3 text-center">R$ 140,00</td>
+                                        <td class="p-3 text-center">R$ 150,00</td>
+                                        <td class="p-3 text-center">R$ 140,00</td>
+                                    </tr>
+                                     <tr class="border-b">
+                                        <td class="p-3 text-left">Fisioterapia, Fono, etc.</td>
+                                        <td class="p-3 text-center">40%</td>
+                                        <td class="p-3 text-center">R$ 60,00</td>
+                                        <td class="p-3 text-center">R$ 60,00</td>
+                                        <td class="p-3 text-center">R$ 60,00</td>
+                                    </tr>
+                                    <tr class="border-b bg-gray-50"><td class="p-2 font-semibold text-gray-600" colspan="5">Internação</td></tr>
+                                    <tr>
+                                        <td class="p-3 text-left">Internação</td>
+                                        <td class="p-3 text-center">-</td>
+                                        <td class="p-3 text-center">R$ 180,00</td>
+                                        <td class="p-3 text-center">R$ 220,00</td>
+                                        <td class="p-3 text-center">R$ 180,00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="copay-table-parcial" class="hidden">
+                        <h3 class="text-lg font-bold text-gray-800 text-center mb-4">Valores para Coparticipação Parcial</h3>
+                         <div class="overflow-x-auto">
+                            <table class="w-full text-sm text-left text-gray-700 bg-white rounded-lg shadow-md">
+                                <thead class="bg-gray-200 text-xs uppercase">
+                                    <tr>
+                                        <th class="p-3 text-left font-medium">Procedimento</th>
+                                        <th class="p-3 text-center font-medium">Percentual</th>
+                                        <th class="p-3 text-center font-medium">Bronze / Bronze+</th>
+                                        <th class="p-3 text-center font-medium">Prata / Ouro</th>
+                                        <th class="p-3 text-center font-medium">S380</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b bg-gray-50"><td class="p-2 font-semibold text-gray-600" colspan="5">Terapias</td></tr>
+                                    <tr class="border-b">
+                                        <td class="p-3 text-left">Fisioterapia, Fono, Nutrição, Psicoterapia, T. Ocupacional</td>
+                                        <td class="p-3 text-center">40%</td>
+                                        <td class="p-3 text-center">R$ 60,00</td>
+                                        <td class="p-3 text-center">R$ 60,00</td>
+                                        <td class="p-3 text-center">R$ 60,00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-
             </div>
-
 
             <div class="bg-gray-800 text-white p-6 rounded-lg text-center shadow-md mt-10">
                 <h2 class="text-xl font-bold mb-1">Ficou com dúvidas ou já decidiu?</h2>
                 <p class="text-gray-100">Fale com o RH para validar os detalhes ou, se preferir, chame-nos diretamente no WhatsApp!</p>
-                
                 <div class="mt-4">
                     <a href="https://wa.me/551120945454?text=Ol%C3%A1%2C%0A%0AQueria%20tirar%20algumas%20d%C3%BAvidas%20sobre%20o%20plano%20de%20sa%C3%BAde."
                        target="_blank"
                        class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 transition-colors">
-                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M12.04 2.012c-5.524 0-10 4.476-10 10.002 0 1.75.45 3.406 1.255 4.842l-1.25 4.143 4.26-1.233a9.924 9.924 0 0 0 4.735 1.218h.002c5.524 0 10-4.476 10-10.002s-4.476-10-10-10.002zm0 18.232h-.002a8.162 8.162 0 0 1-4.14-1.203l-.3-.176-3.055.882.898-2.982-.192-.312a8.138 8.138 0 0 1-1.254-4.397c0-4.52 3.66-8.184 8.18-8.184 2.22 0 4.28.87 5.78 2.373 1.5 1.504 2.37 3.562 2.37 5.782.002 4.52-3.66 8.182-8.18 8.182zm4.8-6.13c-.26-.132-1.542-.76-1.782-.846-.24-.086-.414-.132-.59.132-.174.262-.672.845-.824 1.01-.152.162-.3.18-.56.06-.26-.12-.48-.21-.73-.33-.5-.24-.96-.54-1.36-.9-.32-.29-.58-.52-.79-.81-.2-.28-.27-.41-.4-.53-.13-.12-.27-.18-.4-.25-.13-.07-.28-.09-.42-.09-.14 0-.37.01-.54.02-.17.01-.43.02-.65.03-.22.01-.58.05-.87.32-.29.27-.99.96-.99 2.34 0 1.38.99 2.72 1.14 2.91.15.19 1.98 3.03 4.8 4.26.68.29 1.22.46 1.64.59.75.22 1.42.19 1.95.11.59-.08 1.54-.63 1.76-1.23.22-.6.22-1.14.15-1.23-.07-.09-.26-.15-.52-.28z"/>
-                        </svg>
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2.012c-5.524 0-10 4.476-10 10.002 0 1.75.45 3.406 1.255 4.842l-1.25 4.143 4.26-1.233a9.924 9.924 0 0 0 4.735 1.218h.002c5.524 0 10-4.476 10-10.002s-4.476-10-10-10.002zm0 18.232h-.002a8.162 8.162 0 0 1-4.14-1.203l-.3-.176-3.055.882.898-2.982-.192-.312a8.138 8.138 0 0 1-1.254-4.397c0-4.52 3.66-8.184 8.18-8.184 2.22 0 4.28.87 5.78 2.373 1.5 1.504 2.37 3.562 2.37 5.782.002 4.52-3.66 8.182-8.18 8.182zm4.8-6.13c-.26-.132-1.542-.76-1.782-.846-.24-.086-.414-.132-.59.132-.174.262-.672.845-.824 1.01-.152.162-.3.18-.56.06-.26-.12-.48-.21-.73-.33-.5-.24-.96-.54-1.36-.9-.32-.29-.58-.52-.79-.81-.2-.28-.27-.41-.4-.53-.13-.12-.27-.18-.4-.25-.13-.07-.28-.09-.42-.09-.14 0-.37.01-.54.02-.17.01-.43.02-.65.03-.22.01-.58.05-.87.32-.29.27-.99.96-.99 2.34 0 1.38.99 2.72 1.14 2.91.15.19 1.98 3.03 4.8 4.26.68.29 1.22.46 1.64.59.75.22 1.42.19 1.95.11.59-.08 1.54-.63 1.76-1.23.22-.6.22-1.14.15-1.23-.07-.09-.26-.15-.52-.28z"/></svg>
                         Fale conosco no WhatsApp
                     </a>
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -288,7 +297,7 @@
             data: { "Amil Bronze SP QC": [ { ageRange: [0, 18], price: 140.72 }, { ageRange: [19, 23], price: 191.10 }, { ageRange: [24, 28], price: 224.33 }, { ageRange: [29, 33], price: 224.33 }, { ageRange: [34, 38], price: 224.33 }, { ageRange: [39, 43], price: 250.58 }, { ageRange: [44, 48], price: 346.05 }, { ageRange: [49, 53], price: 413.18 }, { ageRange: [54, 58], price: 594.15 }, { ageRange: [59, 999], price: 842.50 } ], "Amil Bronze SP Mais QC": [ { ageRange: [0, 18], price: 176.09 }, { ageRange: [19, 23], price: 239.13 }, { ageRange: [24, 28], price: 280.71 }, { ageRange: [29, 33], price: 280.71 }, { ageRange: [34, 38], price: 280.71 }, { ageRange: [39, 43], price: 313.55 }, { ageRange: [44, 48], price: 433.01 }, { ageRange: [49, 53], price: 517.01 }, { ageRange: [54, 58], price: 743.46 }, { ageRange: [59, 999], price: 1054.23 } ], "Amil Prata QC": [ { ageRange: [0, 18], price: 323.07 }, { ageRange: [19, 23], price: 377.99 }, { ageRange: [24, 28], price: 461.15 }, { ageRange: [29, 33], price: 553.38 }, { ageRange: [34, 38], price: 581.05 }, { ageRange: [39, 43], price: 639.16 }, { ageRange: [44, 48], price: 798.95 }, { ageRange: [49, 53], price: 878.85 }, { ageRange: [54, 58], price: 1098.56 }, { ageRange: [59, 999], price: 1922.48 } ], "Amil Prata QP": [ { ageRange: [0, 18], price: 358.61 }, { ageRange: [19, 23], price: 419.57 }, { ageRange: [24, 28], price: 511.88 }, { ageRange: [29, 33], price: 614.26 }, { ageRange: [34, 38], price: 644.97 }, { ageRange: [39, 43], price: 709.47 }, { ageRange: [44, 48], price: 886.84 }, { ageRange: [49, 53], price: 975.52 }, { ageRange: [54, 58], price: 1219.40 }, { ageRange: [59, 999], price: 2133.95 } ], "Amil Ouro QC": [ { ageRange: [0, 18], price: 367.64 }, { ageRange: [19, 23], price: 430.14 }, { ageRange: [24, 28], price: 524.77 }, { ageRange: [29, 33], price: 629.72 }, { ageRange: [34, 38], price: 661.21 }, { ageRange: [39, 43], price: 727.33 }, { ageRange: [44, 48], price: 909.16 }, { ageRange: [49, 53], price: 1000.08 }, { ageRange: [54, 58], price: 1250.10 }, { ageRange: [59, 999], price: 2187.68 } ], "Amil Ouro QP": [ { ageRange: [0, 18], price: 408.09 }, { ageRange: [19, 23], price: 477.47 }, { ageRange: [24, 28], price: 582.51 }, { ageRange: [29, 33], price: 699.01 }, { ageRange: [34, 38], price: 733.96 }, { ageRange: [39, 43], price: 807.36 }, { ageRange: [44, 48], price: 1009.20 }, { ageRange: [49, 53], price: 1110.12 }, { ageRange: [54, 58], price: 1387.65 }, { ageRange: [59, 999], price: 2428.39 } ] }
         }
     };
-    
+
     // --- VARIÁVEIS DE ESTADO ---
     let selectedTier = null;
     let selectedLine = null;
@@ -310,6 +319,8 @@
     const calculateBtn = document.getElementById('calculate-btn');
     const simulationResultsDiv = document.getElementById('simulation-results');
     const viewNetworkBtn = document.getElementById('view-network-btn');
+    const copayTableCompleta = document.getElementById('copay-table-completa');
+    const copayTableParcial = document.getElementById('copay-table-parcial');
     
     let dependentCount = 0;
 
@@ -319,7 +330,6 @@
             tierButtons.forEach(btn => btn.classList.remove('selected'));
             e.currentTarget.classList.add('selected');
             selectedTier = e.currentTarget.dataset.tier;
-            
             lineSelectionDiv.classList.remove('hidden');
             copaySelectionDiv.classList.add('hidden');
             mainSimulator.classList.add('hidden');
@@ -332,7 +342,6 @@
             lineButtons.forEach(btn => btn.classList.remove('selected'));
             e.currentTarget.classList.add('selected');
             selectedLine = e.currentTarget.dataset.line;
-
             copaySelectionDiv.classList.remove('hidden');
             mainSimulator.classList.add('hidden');
             simulationResultsDiv.classList.add('hidden');
@@ -351,6 +360,15 @@
             
             mainSimulator.classList.remove('hidden');
             simulationResultsDiv.classList.add('hidden');
+
+            // --- LÓGICA PARA EXIBIR A TABELA DE COPARTICIPAÇÃO CORRETA ---
+            if (selectedCopay === 'completa') {
+                copayTableParcial.classList.add('hidden');
+                copayTableCompleta.classList.remove('hidden');
+            } else if (selectedCopay === 'parcial') {
+                copayTableCompleta.classList.add('hidden');
+                copayTableParcial.classList.remove('hidden');
+            }
         });
     });
 
@@ -386,7 +404,6 @@
             alert('Por favor, complete todos os passos de seleção antes de simular.');
             return;
         }
-
         const holderAge = parseInt(holderAgeInput.value, 10) || null;
         if (!holderAge) {
             alert('Por favor, insira a idade do titular.');
@@ -399,18 +416,13 @@
         const allAges = [ {type: 'Titular', age: holderAge}, ...dependentAges.map((age, i) => ({type: `Dependente ${i+1}`, age}))];
         
         allAges.forEach(person => {
-            const isTitular = person.type === 'Titular';
             let personLabel = `${person.type} (${person.age} anos)`;
-            
             tableRows += `<tr class="border-b"><td class="p-2 font-semibold text-gray-800">${personLabel}</td>`;
-            
             activePlans.forEach(planName => {
-                const fullPrice = getPriceForAge(person.age, planName, activePricingData);
-                const finalPrice = fullPrice;
-                
+                const finalPrice = getPriceForAge(person.age, planName, activePricingData);
                 totals[planName] += finalPrice;
                 tableRows += `<td class="p-2 text-center text-sm">${formatCurrency(finalPrice)}</td>`;
-            });p
+            });
             tableRows += `</tr>`;
         });
         
@@ -438,6 +450,5 @@
         simulationResultsDiv.classList.remove('hidden');
     }
 </script>
-
 </body>
 </html>
