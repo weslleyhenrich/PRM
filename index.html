@@ -122,133 +122,37 @@
                     </button>
                     <div id="simulation-results" class="mt-6 hidden"></div>
                 </div>
-
-                <div id="network-viewer" class="bg-indigo-50 p-6 rounded-lg border border-indigo-200 mt-8">
-                    <h2 class="text-2xl font-bold text-gray-800 text-center mb-1">Passo 4: Consulte a Rede Oficial</h2>
-                    <p class="text-center text-gray-600 mb-6">
-                        Para garantir que seus médicos e hospitais preferidos estão cobertos, siga o passo a passo abaixo e consulte a rede completa no site oficial da Amil.
-                    </p>
-                    <div class="my-6 flex justify-center">
-                        <img src="https://i.ibb.co/yGzTxX8/Untitled-Made-with-Flex-Clip.gif" alt="Passo a passo para consultar a rede credenciada Amil" border="0" class="rounded-lg shadow-md max-w-full h-auto">
-                    </div>
-                    <div class="mt-4">
-                        <button id="view-network-btn" class="w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors">
-                            Acessar Rede Credenciada Amil
-                        </button>
-                    </div>
-                </div>
-
+                
                 <div id="copay-info-section" class="bg-gray-50 p-6 rounded-lg border border-gray-200 mt-8">
                     <h2 class="text-2xl font-bold text-gray-800 text-center mb-2">Regras de Coparticipação</h2>
                     <p class="text-center text-gray-700 leading-relaxed max-w-4xl mx-auto mb-8">
                         A coparticipação é uma modalidade em que o usuário paga, além do valor mensal do plano, uma taxa a cada vez que utilizar um serviço. O valor é um percentual do custo, mas com um <strong>limite (teto) de cobrança</strong> para garantir previsibilidade.
                     </p>
-                    
                     <div id="copay-table-completa" class="hidden">
                         <h3 class="text-lg font-bold text-gray-800 text-center mb-4">Valores para Coparticipação Completa</h3>
                         <div class="overflow-x-auto">
-                            <table class="w-full text-sm text-left text-gray-700 bg-white rounded-lg shadow-md">
-                                <thead class="bg-gray-200 text-xs uppercase">
-                                    <tr>
-                                        <th class="p-3 text-left font-medium">Procedimento</th>
-                                        <th class="p-3 text-center font-medium">Percentual</th>
-                                        <th class="p-3 text-center font-medium">Bronze / Bronze+</th>
-                                        <th class="p-3 text-center font-medium">Prata / Ouro</th>
-                                        <th class="p-3 text-center font-medium">S380</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="border-b bg-gray-50"><td class="p-2 font-semibold text-gray-600" colspan="5">Consultas</td></tr>
-                                    <tr class="border-b">
-                                        <td class="p-3 text-left">Consulta Eletiva</td>
-                                        <td class="p-3 text-center">30%</td>
-                                        <td class="p-3 text-center">R$ 30,00</td>
-                                        <td class="p-3 text-center">R$ 30,00</td>
-                                        <td class="p-3 text-center">R$ 30,00</td>
-                                    </tr>
-                                    <tr class="border-b">
-                                        <td class="p-3 text-left">Consulta em Pronto-Socorro</td>
-                                        <td class="p-3 text-center">40%</td>
-                                        <td class="p-3 text-center">R$ 80,00</td>
-                                        <td class="p-3 text-center">R$ 90,00</td>
-                                        <td class="p-3 text-center">R$ 80,00</td>
-                                    </tr>
-                                    <tr class="border-b bg-gray-50"><td class="p-2 font-semibold text-gray-600" colspan="5">Exames</td></tr>
-                                    <tr class="border-b">
-                                        <td class="p-3 text-left">Exames Básicos</td>
-                                        <td class="p-3 text-center">30%</td>
-                                        <td class="p-3 text-center">R$ 20,00</td>
-                                        <td class="p-3 text-center">R$ 25,00</td>
-                                        <td class="p-3 text-center">R$ 20,00</td>
-                                    </tr>
-                                    <tr class="border-b">
-                                        <td class="p-3 text-left">Exames Especiais</td>
-                                        <td class="p-3 text-center">30%</td>
-                                        <td class="p-3 text-center">R$ 100,00</td>
-                                        <td class="p-3 text-center">R$ 110,00</td>
-                                        <td class="p-3 text-center">R$ 100,00</td>
-                                    </tr>
-                                    <tr class="border-b bg-gray-50"><td class="p-2 font-semibold text-gray-600" colspan="5">Procedimentos e Terapias</td></tr>
-                                    <tr class="border-b">
-                                        <td class="p-3 text-left">Procedimentos Básicos</td>
-                                        <td class="p-3 text-center">30%</td>
-                                        <td class="p-3 text-center">R$ 35,00</td>
-                                        <td class="p-3 text-center">R$ 60,00</td>
-                                        <td class="p-3 text-center">R$ 35,00</td>
-                                    </tr>
-                                    <tr class="border-b">
-                                        <td class="p-3 text-left">Procedimentos Especiais</td>
-                                        <td class="p-3 text-center">30%</td>
-                                        <td class="p-3 text-center">R$ 140,00</td>
-                                        <td class="p-3 text-center">R$ 150,00</td>
-                                        <td class="p-3 text-center">R$ 140,00</td>
-                                    </tr>
-                                     <tr class="border-b">
-                                        <td class="p-3 text-left">Fisioterapia, Fono, etc.</td>
-                                        <td class="p-3 text-center">40%</td>
-                                        <td class="p-3 text-center">R$ 60,00</td>
-                                        <td class="p-3 text-center">R$ 60,00</td>
-                                        <td class="p-3 text-center">R$ 60,00</td>
-                                    </tr>
-                                    <tr class="border-b bg-gray-50"><td class="p-2 font-semibold text-gray-600" colspan="5">Internação</td></tr>
-                                    <tr>
-                                        <td class="p-3 text-left">Internação</td>
-                                        <td class="p-3 text-center">-</td>
-                                        <td class="p-3 text-center">R$ 180,00</td>
-                                        <td class="p-3 text-center">R$ 220,00</td>
-                                        <td class="p-3 text-center">R$ 180,00</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                            </div>
                     </div>
-
                     <div id="copay-table-parcial" class="hidden">
                         <h3 class="text-lg font-bold text-gray-800 text-center mb-4">Valores para Coparticipação Parcial</h3>
                          <div class="overflow-x-auto">
-                            <table class="w-full text-sm text-left text-gray-700 bg-white rounded-lg shadow-md">
-                                <thead class="bg-gray-200 text-xs uppercase">
-                                    <tr>
-                                        <th class="p-3 text-left font-medium">Procedimento</th>
-                                        <th class="p-3 text-center font-medium">Percentual</th>
-                                        <th class="p-3 text-center font-medium">Bronze / Bronze+</th>
-                                        <th class="p-3 text-center font-medium">Prata / Ouro</th>
-                                        <th class="p-3 text-center font-medium">S380</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="border-b bg-gray-50"><td class="p-2 font-semibold text-gray-600" colspan="5">Terapias</td></tr>
-                                    <tr class="border-b">
-                                        <td class="p-3 text-left">Fisioterapia, Fono, Nutrição, Psicoterapia, T. Ocupacional</td>
-                                        <td class="p-3 text-center">40%</td>
-                                        <td class="p-3 text-center">R$ 60,00</td>
-                                        <td class="p-3 text-center">R$ 60,00</td>
-                                        <td class="p-3 text-center">R$ 60,00</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                           </div>
                     </div>
+                </div>
+            </div>
+
+            <div id="network-viewer" class="bg-indigo-50 p-6 rounded-lg border border-indigo-200 mt-8">
+                <h2 class="text-2xl font-bold text-gray-800 text-center mb-1">Consulte a Rede Oficial</h2>
+                <p class="text-center text-gray-600 mb-6">
+                    Para garantir que seus médicos e hospitais preferidos estão cobertos, siga o passo a passo abaixo e consulte a rede completa no site oficial da Amil.
+                </p>
+                <div class="my-6 flex justify-center">
+                    <img src="https://i.ibb.co/yGzTxX8/Untitled-Made-with-Flex-Clip.gif" alt="Passo a passo para consultar a rede credenciada Amil" border="0" class="rounded-lg shadow-md max-w-full h-auto">
+                </div>
+                <div class="mt-4">
+                    <button id="view-network-btn" class="w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors">
+                        Acessar Rede Credenciada Amil
+                    </button>
                 </div>
             </div>
 
@@ -462,6 +366,7 @@
 </body>
 
 </html>
+
 
 
 
